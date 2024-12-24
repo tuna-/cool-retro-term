@@ -1,30 +1,32 @@
 # cool-retro-term
 
-|> Default Amber|C:\ IBM DOS|$ Default Green|
-|---|---|---|
-|![Default Amber Cool Retro Term](https://user-images.githubusercontent.com/121322/32070717-16708784-ba42-11e7-8572-a8fcc10d7f7d.gif)|![IBM DOS](https://user-images.githubusercontent.com/121322/32070716-16567e5c-ba42-11e7-9e64-ba96dfe9b64d.gif)|![Default Green Cool Retro Term](https://user-images.githubusercontent.com/121322/32070715-163a1c94-ba42-11e7-80bb-41fbf10fc634.gif)|
+cool-retro-term is a terminal emulator which mimics the look and feel of the old cathode tube screens. [Upstream](https://github.com/Swordfish90/cool-retro-term)
 
-## Description
-cool-retro-term is a terminal emulator which mimics the look and feel of the old cathode tube screens.
-It has been designed to be eye-candy, customizable, and reasonably lightweight.
+Since the upstream has not update in years, there is no binary for Apple Silicon (arm64) Macs. **This fork is to provide a binary for Apple Silicon Macs, built directly from the source code using GitHub Actions.** [Background](https://github.com/Swordfish90/cool-retro-term/issues/656#issuecomment-2560849246)
 
-It uses the QML port of qtermwidget (Konsole): https://github.com/Swordfish90/qmltermwidget.
+## Installing
 
-This terminal emulator works under Linux and macOS and requires Qt5. It's suggested that you stick to the latest LTS version.
+If you want a ready-to-use binary, you can download it from the [Releases Page](https://github.com/charlie0129/cool-retro-term/releases). Download the dmg and drag `cool-retro-term.app` to your `Applications` folder.
 
-Settings such as colors, fonts, and effects can be accessed via context menu.
+<img width="945" alt="image" src="https://github.com/user-attachments/assets/6b175dc1-6188-4f39-aee4-ac69ed8a7bef" />
 
-## Screenshots
-![Image](<https://i.imgur.com/TNumkDn.png>)
-![Image](<https://i.imgur.com/hfjWOM4.png>)
-![Image](<https://i.imgur.com/GYRDPzJ.jpg>)
+If necessary, *right-click* (*control-click*) `cool-retro-term.app` and select *Open* to bypass the security warning.
 
-## Install
+<img width="610" alt="image" src="https://github.com/user-attachments/assets/e9543946-e414-43fa-94a5-e12627ecc0ec" />
 
-If you want to get a hold of the latest version, just go to the Releases page and grab the latest AppImage (Linux) or dmg (macOS).
+See it running on a arm64 Mac:
 
-Alternatively, most distributions such as Ubuntu, Fedora or Arch already package cool-retro-term in their official repositories.
+![image](https://github.com/user-attachments/assets/0295ae46-08eb-485c-baa9-5637f810068e)
 
 ## Building
 
-Check out the wiki and follow the instructions on how to build it on [Linux](https://github.com/Swordfish90/cool-retro-term/wiki/Build-Instructions-(Linux)) and [macOS](https://github.com/Swordfish90/cool-retro-term/wiki/Build-Instructions-(macOS)).
+If you don't trust the binary I provided, you can fork this repo and let GitHub Actions build it for you. The binary will be uploaded as an artifact to the corresponding job.
+
+After you enable GitHub Actions in your fork, you can use `workflow_dispatch` to trigger the build manually.
+
+<img width="1030" alt="image" src="https://github.com/user-attachments/assets/4e968850-4d4d-4375-9832-7684aea4527a" />
+
+Download the artifact (containing the `.dmg`) from the corresponding job.
+
+<img width="1032" alt="image" src="https://github.com/user-attachments/assets/f1bb3f52-ac99-44f7-9135-ac2cbd64d5dc" />
+
