@@ -5,7 +5,7 @@ on:
 
 jobs:
   macos:
-    runs-on: macos-14
+    runs-on: macos-latest
 
     steps:
     - name: Checkout repository
@@ -28,6 +28,7 @@ jobs:
         macdeployqt cool-retro-term.app -qmldir=app/qml -dmg
 
     - name: Upload Artifacts
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
+        name: cool-retro-term.dmg
         path: cool-retro-term.dmg
