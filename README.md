@@ -12,6 +12,9 @@ If you want a ready-to-use binary, you can download it from the [Releases Page](
 
 If necessary, *right-click* (*control-click*) `cool-retro-term.app` and select *Open* to bypass the security warning.
 
+> [!NOTE]
+> Remove quarantine if you cannot open the app even if you *right-click-open*'d it: `sudo xattr -r -d com.apple.quarantine /Applications/cool-retro-term.app`
+
 <img width="610" alt="image" src="https://github.com/user-attachments/assets/e9543946-e414-43fa-94a5-e12627ecc0ec" />
 
 See it running on a arm64 Mac:
